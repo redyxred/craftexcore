@@ -1,0 +1,20 @@
+AddDefaultCharset utf-8
+
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^account/register$  /index.php?page=register  [L] # Выполнено
+RewriteRule ^account/login$ /index.php?page=login [L] # Выполнено
+RewriteRule ^account/logout$	/core/actions/logout.php	[L] # Выполнено
+RewriteRule ^account/reset$	/index.php?page=resetpassword	[L]
+
+RewriteRule ^account/shop$	/index.php?page=account&section=shop	[L] # Выполнено
+RewriteRule ^account/refer$	/index.php?page=account&section=refer	[L] 
+RewriteRule ^account/jobs$	/index.php?page=account&section=jobs	[L]
+RewriteRule ^account/settings$	/index.php?page=account&section=settings	[L] # Выполнено
+RewriteRule ^account/pay$	/index.php?page=account&section=pay	[L]
+RewriteRule ^account$ /index.php?page=account&section=profile [L] # Выполнено
+
+RewriteRule ^profile/(.*)$  /index.php?page=userinfo&user=$1  [L] # Выполнено
+
+RewriteRule ^admin$	/index.php?page=account&section=admin	[L] # Выполнение
